@@ -130,7 +130,7 @@ angular.module('snorql.service',[])
   // manage default snorql state
   Snorql.prototype.updateQuery=function(params){
     if(params.class){
-      this.query=defaultSnorql['class'].replace(/URI_COMPONENT/g,params.class);
+      this.query=defaultSnorql['clazz'].replace(/URI_COMPONENT/g,params.class);
     }else
     if(params.property){
       this.query=defaultSnorql['property'].replace(/URI_COMPONENT/g,params.property);
@@ -178,7 +178,6 @@ angular.module('snorql.service',[])
    // html output is done by parsing json
    params.output='json'
    this.$promise=$http({method:'GET', url:url,params:params,headers:accept, timeout: this.canceler.promise});
-   console.log(this.$promise)
    this.$promise.then(function(config){
       self.result=(config.data);
       console.log(self.result);
