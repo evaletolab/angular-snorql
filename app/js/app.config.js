@@ -24,9 +24,9 @@ angular.module('snorql.config', []).factory('config', [
 
         // global application configuration
         var defaultConfig = {
-            home:'http://dbpedia.org/sparql',
+            home:'https://github.com/evaletolab/angular-snorql',
             sparql : {
-              endpoint: 'http://crick.isb-sib.ch:8080/nextprot-api/sparql',
+              endpoint: 'http://dbpedia.org/sparql',
               examples: 'queries.json',
               prefixes: namespacePrefixes
           }
